@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --bg-color: #000000;
+  --primary-text: #ffffff;
+  --muted-text: #888888;
+  --border-color: #222222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  font-family: 'Times New Roman', Times, serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.4em;
+}
+
+.heading-font {
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.sans-font {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.prose-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.muted-prose {
+  color: var(--muted-text);
+}
+
+.link-hover:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+::selection {
+  background: #ffffff;
+  color: #000000;
+}
