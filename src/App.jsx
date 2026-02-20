@@ -168,7 +168,7 @@ function App() {
           </div>
         </section>
 
-        {/* Newsletter Section */}
+        {/* Newsletter Section - Hidden for now
         <RevealSection>
           <section className="pt-16 border-t border-white/10 mb-24">
             <h2 className="heading-font text-[11px] text-white/30 tracking-[0.5em] mb-8">Stay Updated</h2>
@@ -192,6 +192,7 @@ function App() {
             </form>
           </section>
         </RevealSection>
+        */}
 
         {/* Get in Touch Section */}
         <RevealSection>
@@ -202,22 +203,37 @@ function App() {
                 Whether you're a researcher, investor, or builder—we'd love to hear from you.
               </p>
             </div>
-            <form className="space-y-6 max-w-xl">
+            <form 
+              action="https://formsubmit.co/renee@aolabs.ai" 
+              method="POST"
+              className="space-y-6 max-w-xl"
+            >
+              {/* FormSubmit configuration */}
+              <input type="hidden" name="_subject" value="New contact from AO Labs website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input 
                   type="text" 
+                  name="name"
                   placeholder="Name"
+                  required
                   className="bg-transparent border border-white/20 px-6 py-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-white/50 transition-colors"
                 />
                 <input 
                   type="email" 
+                  name="email"
                   placeholder="Email"
+                  required
                   className="bg-transparent border border-white/20 px-6 py-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-white/50 transition-colors"
                 />
               </div>
               <select 
+                name="interest"
                 className="w-full bg-black border border-white/20 px-6 py-4 text-sm text-white/50 focus:outline-none focus:border-white/50 transition-colors appearance-none cursor-pointer"
                 defaultValue=""
+                required
               >
                 <option value="" disabled>I'm interested in...</option>
                 <option value="investing">Investing</option>
@@ -227,8 +243,10 @@ function App() {
                 <option value="other">Other</option>
               </select>
               <textarea 
+                name="message"
                 placeholder="Your message"
                 rows={4}
+                required
                 className="w-full bg-transparent border border-white/20 px-6 py-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-white/50 transition-colors resize-none"
               />
               <button 
@@ -273,12 +291,7 @@ function App() {
                   SAN FRANCISCO &bull; CALIFORNIA &bull; 37.7749° N, 122.4194° W
                 </div>
               </div>
-              <div className="flex justify-center gap-8 text-[10px] text-white/30 pt-8 uppercase tracking-widest">
-                <a href="#" className="hover:text-white transition-colors">X / Twitter</a>
-                <a href="#" className="hover:text-white transition-colors">GitHub</a>
-                <a href="#" className="hover:text-white transition-colors">Technical Docs</a>
-              </div>
-              <p className="text-[9px] text-white/10 mt-12 uppercase tracking-[0.3em]">
+              <p className="text-[9px] text-white/10 mt-8 uppercase tracking-[0.3em]">
                 © 2026 AO LABS SF. BEYOND THE STACK.
               </p>
             </div>
