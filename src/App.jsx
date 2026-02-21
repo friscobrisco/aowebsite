@@ -11,11 +11,9 @@ function App() {
       {/* Glass Navigation */}
       <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 bg-black/40 backdrop-blur-xl border-b border-white/5">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          {/* Logo Placeholder */}
-          <a href="#" className="flex items-center gap-3">
-            <div className="w-10 h-10 border border-white/20 rounded-sm flex items-center justify-center text-xs text-white/40 heading-font">
-              AO
-            </div>
+          {/* Logo */}
+          <a href="#" className="flex items-center">
+            <img src="/ao-logo-white.png" alt="AO Labs" className="h-8" />
           </a>
           
           {/* Nav Links */}
